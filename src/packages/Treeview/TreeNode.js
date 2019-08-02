@@ -60,7 +60,7 @@ class TreeNode extends Component {
                         <div className={classes.controlsWrapper}>
                             <ButtonWithMenu
                                 nodeId={node.id}
-                                noDelete={node.isRoot}
+                                noDelete={node.isRoot || !isNoChildren}
                                 onAdd={onAdd}
                                 onEdit={onEdit}
                                 onDelete={onDelete}

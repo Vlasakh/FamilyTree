@@ -22,7 +22,7 @@ export default class Tree extends Component {
 
     render() {
         const rootNodes = this.getRootNodes();
-        const { onAdd, onEdit } = this.props;
+        const { onAdd, onEdit, onDelete } = this.props;
 
         return (
             <div>
@@ -34,6 +34,7 @@ export default class Tree extends Component {
                         onNodeSelect={this.onNodeSelect}
                         onAdd={onAdd}
                         onEdit={onEdit}
+                        onDelete={onDelete}
                     />
                 ))}
             </div>

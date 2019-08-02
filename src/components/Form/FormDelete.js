@@ -17,12 +17,12 @@ class FormDelete extends Component {
     handleSaveClick = () => {
         const { nodeId } = this.props;
 
-        this.props.onDelete({ nodeId: nodeId });
+        this.props.onDelete({ nodeId });
     };
 
     render() {
         const { classes, data, nodeId } = this.props;
-        const { name } = data[nodeId];
+        const { name } = data[nodeId] || {};
 
         return (
             <div className={classes.wrapper}>
