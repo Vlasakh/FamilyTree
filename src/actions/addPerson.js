@@ -3,7 +3,7 @@ function addPerson(context, { name, parentNodeId }) {
     let nextId = 0;
 
     nextId = Object.keys(treeData).reduce(
-        (prev, key) => console.log('data', prev, key) || Math.max(prev, key),
+        (prev, key) => Math.max(prev, key),
         nextId
     );
     nextId = `${++nextId}`;
